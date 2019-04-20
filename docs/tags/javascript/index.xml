@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Javascript on Wang&#39;s Blog</title>
+    <title>JavaScript on Wang&#39;s Blog</title>
     <link>https://idontwannarock.github.io/hugo_blog/tags/javascript/</link>
-    <description>Recent content in Javascript on Wang&#39;s Blog</description>
+    <description>Recent content in JavaScript on Wang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 15 Sep 2017 10:11:46 +0800</lastBuildDate>
