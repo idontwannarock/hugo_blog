@@ -223,4 +223,4 @@ publishDir = "docs"
 
   # Customize copyright value "© 2016 <CUSTOMIZATION>. All Rights Reserved"
   [params.footer]
-    copyright = "<a href=\"https://github.com/idontwannarock\">Wang Cheng Hao</a>.  All Rights Reserved"
+    copyright = "<a href=\"https://github.com/idontwannarock\">Wang Cheng Hao</a>"
