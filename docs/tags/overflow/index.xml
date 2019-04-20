@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>overflow on Wang&#39;s Blog</title>
+    <link>https://idontwannarock.github.io/hugo_blog/tags/overflow/</link>
+    <description>Recent content in overflow on Wang&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Oct 2017 07:04:47 +0800</lastBuildDate>
+    
+	<atom:link href="https://idontwannarock.github.io/hugo_blog/tags/overflow/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>整數溢位 Integer Overflow</title>
+      <link>https://idontwannarock.github.io/hugo_blog/2017/10/%E6%95%B4%E6%95%B8%E6%BA%A2%E4%BD%8D-integer-overflow/</link>
+      <pubDate>Sun, 01 Oct 2017 07:04:47 +0800</pubDate>
+      
+      <guid>https://idontwannarock.github.io/hugo_blog/2017/10/%E6%95%B4%E6%95%B8%E6%BA%A2%E4%BD%8D-integer-overflow/</guid>
+      <description>前言 這是我查到一些資料後的理解，希望能多一點對整數溢位後為何會正負循環的了解。
+數字系統 首先要了解的是數字系統，因為一般電腦是採用二進制(Binary)來作數字計算，而不是我們習慣的十進制(Decimal)。
+我們一般人都是用十進制，十進制就是用0、1、2、3、4、5、6、7、8、9十個數字來表達，一個位數就有十種狀態，從 0開始往上累積，超過 9就進一位。
+而二進制是什麼呢？二進制就是用0、1兩個數字來表達，一個位數就只有兩種狀態表達，從 0開始往上累積，超過 1就進一位。
+以十進制來說，13這個數字其實應該寫成1*10^1 + 3*10^0這樣。10^0是1，也就是代表個位數，乘以幾就是這個位數累積到幾，超過9就進一位到10^1這一位，也就是十位數；再累積超過9，就進位到10^2百位數，以此類推。
+那二進制怎麼表達呢？例如有一個二進制的數字長這樣1101，如同十進制，我們可以表達成1*2^3 + 1*2^2 + 0*2^1 + 1*2^0。這樣公式算完的答案其實就是十進制的13，大家可以算一下試試看。其實其他如八進制、十六進制也是相同原理，只不過超過十進制的進制系統，因為阿拉伯數字無法在單一位數表達10以上的數字大小，所以通常會配合英文字母A、B、C、D等等。
+另外複習一下國小（國中？）數學，小數點的部分，以我們常用的十進制來說，小數點後第一位是10^-1、第二位是10^-2，以此類推；相對的二進制也是一樣規則，小數點後第一位是2^-1、第二位是2^-2這樣。
+電腦基本運算方式 前面說到一般電腦是用二進制運算，這是什麼意思？
+舉個例子，今天假設一台電腦，我們拉了第一條電線在裡面，一條電線怎麼表達不同的狀態呢？對，就是通電，有通電是一種狀態，沒通電是一種狀態。當然比較實際的作法是透過電壓，高電壓是一種狀態，低電壓是一種狀態，這樣來表達兩種狀態。
+因此一條電線就能表達兩種狀態，剛好符合二進制只用0、1兩個數字來表達所有數字的狀態，而這樣能表達兩種狀態（1或 0）的一條電線就是 1 bit。順便講一下因為某些原因，8 bits被規定為 1 byte。bit就是我們常聽到的位元，byte就是我們更常聽到的位元組。
+那 1 bit可以表達兩種狀態，以二進制來說就是可以表達 0跟 1；那 2 bits呢？是四種；那 3 bits呢？是六種？錯，是八種。
+我們用列舉的方式說明，3 bits意思是有三條電線各自有 0跟 1兩種狀態，因此我們可以列出有下列八種狀況：
+   狀況 第一條電線 第二條電線 第三條電線     一 0 0 0   二 0 0 1   三 0 1 0   四 0 1 1   五 1 0 0   六 1 0 1   七 1 1 0   八 1 1 1    簡略來說就是其實是有 2*2*2=8，也就是 23種狀況；以此類推，n bit（n條電線）就有 2n種狀況。</description>
+    </item>
+    
+  </channel>
+</rss>

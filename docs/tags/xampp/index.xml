@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>XAMPP on Wang&#39;s Blog</title>
+    <link>https://idontwannarock.github.io/hugo_blog/tags/xampp/</link>
+    <description>Recent content in XAMPP on Wang&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 10 Sep 2017 07:39:23 +0800</lastBuildDate>
+    
+	<atom:link href="https://idontwannarock.github.io/hugo_blog/tags/xampp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>XAMPP安裝設定及簡單 PHP練習</title>
+      <link>https://idontwannarock.github.io/hugo_blog/2017/09/xampp-setup-1/</link>
+      <pubDate>Sun, 10 Sep 2017 07:39:23 +0800</pubDate>
+      
+      <guid>https://idontwannarock.github.io/hugo_blog/2017/09/xampp-setup-1/</guid>
+      <description>源起 之前提到的胡立大大在 Slack群組裡發布了他擬的教學實驗計畫大綱，大概分為以下四段：
+ 網頁後端相關（Session, Database, Server）
+ 網頁前端相關（HTML, JavaScript, CSS, jQuery）
+ 程式解題相關（帶大家做一些 ACM 一二星題或是基本演算法資料結構）
+ 資訊安全相關（SQL Injection, CSRF, XSS）
+  裡面還有一堆細項，總之就從頭開始練習，第一項就是「在自己的電腦上成功運行 PHP」，還有給提示可以用 XAMPP架環境，然後用 PHP寫 hello world，那就來試試看吧。
+學習目標 學習用 XAMPP建構環境，並用 PHP寫一句 hello world。
+學習內容 什麼是 XAMPP XAMPP官網的解釋是一個 PHP開發環境，是一個 Apache的發行版本，包含了 MariaDB、PHP和 Perl。
+完全看不懂，先來查一下名詞。
+PHP我大概知道，是一種後端的語言，理論上可以配合各種 SQL語言跟資料庫作溝通，然後再跟前端連結作輸出。至於 PHP到底算不算程式語言這種問題就跳過。
+Apache則是久聞其名但不知其詳。谷哥上的資料看起來是一種網頁伺服器，但伺服器是什麼？我沒念過計概，我也不知道計概教不教這個，總之就是沒概念，只好再查。
+運氣很好，又找到這篇[WDC] 淺談 Web Server 及 Application Server （上），終於有點概念，這邊說的 server就是提供 web服務的伺服器，而不是實體的機器。所以 Apache就是提供 web功能的伺服器程式。依照這個脈絡，所謂的 PHP開發環境，應該是 XAMPP提供可以運行 PHP功能的 Apache伺服器環境，也包括可以運行 MariaDB跟 Perl。
+這樣看來，XAMPP應該就是類似一個打包的軟體，一次幫你安裝設定好可以運行 Apache、PHP、MariaDB及 Perl的伺服器環境，把個人電腦當伺服器跟資料庫來使用。</description>
+    </item>
+    
+  </channel>
+</rss>

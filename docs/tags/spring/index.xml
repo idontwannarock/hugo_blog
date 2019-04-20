@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spring on Wang&#39;s Blog</title>
+    <link>https://idontwannarock.github.io/hugo_blog/tags/spring/</link>
+    <description>Recent content in Spring on Wang&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Apr 2018 13:22:52 +0800</lastBuildDate>
+    
+	<atom:link href="https://idontwannarock.github.io/hugo_blog/tags/spring/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AOP及Spring AOP簡述</title>
+      <link>https://idontwannarock.github.io/hugo_blog/2018/04/aop%E5%8F%8Aspring-aop%E7%B0%A1%E8%BF%B0/</link>
+      <pubDate>Tue, 10 Apr 2018 13:22:52 +0800</pubDate>
+      
+      <guid>https://idontwannarock.github.io/hugo_blog/2018/04/aop%E5%8F%8Aspring-aop%E7%B0%A1%E8%BF%B0/</guid>
+      <description>簡述  AOP(Aspect-Oriented Programming) 是一種基於 OOP(Object-Oriented Programming) 的改進 AOP 是基於動態代理 (Dynamic Proxy) 這種 design pattern AOP 主要的設計對象是切面 (Aspect)，而切面是用來模組化橫切關注點 (Cross-Cutting Concern) 切面需要定義公共功能，但可以明確定義功能在哪裡或以什麼方式應用，而不必修改受影響的類別。如此切面關注點就可以被模組化到特殊的類別 (切面) 裡面  優點  交易相關的邏輯位於同一位置，便於維護與升級 業務邏輯更簡潔，只包含核心業務代碼  AOP術語及概念  Cross-Cutting Concern 橫切關注點：橫跨應用系統多個流程、模組的功能，例如日誌 (Logging)、安全 (Security) 檢查、交易 (Transaction) 等動作，在許多流程的多個位置都需要執行，這種動作就被稱為橫切關注點 Aspect 切面：橫切關注點被模組化後的一種特殊物件；還未模組化前是橫切關注點，抽取後成為一組一組的切面；另一方面來說代理會將一個一個切面重組為橫切關注點 Advice 通知：切面必須要完成的工作或行為，也就是切面的實作內容。切面裡面的各個方法即是一個、一個的通知 Target 目標：被通知的物件，也就是要被橫切的業務邏輯類別 Proxy 代理：向目標物件通知之後創建的對象。容器會建立一個代理，依照設定去縫合 (weave) 切面到應用程式中 JoinPoint 連接點：程序執行的某個特定位置或時機。例如某個類別的某個方法呼叫前、呼叫後、拋出異常後等等。  連接點由兩個因素決定：以方法表示的程式執行點、相對執行點表示的方位。例如 A 類別的 a() 方法執行前的 JoinPoint 連接點決定要素為：執行點 A#a()，方位為執行前的位置 概念類比：JoinPoint 連接點相當於資料庫的紀錄，切面相當於查詢條件  Pointcut 切面定義：每個類別都有多個連接點，類別的所有方法某種程度上都可以想成是 JoinPoint 連接點。AOP通過切面定位到特定的連接點  Spring AOP 簡述  AspectJ：Java 社群最完整、最廣為人知的 AOP 實作 Spring 2.</description>
+    </item>
+    
+  </channel>
+</rss>

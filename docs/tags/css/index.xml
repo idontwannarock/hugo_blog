@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CSS on Wang&#39;s Blog</title>
+    <link>https://idontwannarock.github.io/hugo_blog/tags/css/</link>
+    <description>Recent content in CSS on Wang&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 15 Sep 2017 09:44:03 +0800</lastBuildDate>
+    
+	<atom:link href="https://idontwannarock.github.io/hugo_blog/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2nd Practice: Retina Morning Post</title>
+      <link>https://idontwannarock.github.io/hugo_blog/2017/09/2nd-practice-retina-morning-post/</link>
+      <pubDate>Fri, 15 Sep 2017 09:44:03 +0800</pubDate>
+      
+      <guid>https://idontwannarock.github.io/hugo_blog/2017/09/2nd-practice-retina-morning-post/</guid>
+      <description>第二個目標 練習報紙排版。
+作品：視網膜早報
+參考：視網膜 Retina FB圖片
+遇到困難 1. 分散對齊 首先遇到的問題就是要讓文字分散對齊，原本以為用text-align: justify;可以解決，結果才發現這只能用在超過一行的文字上哭哭。
+然後查到一個 jQuery解法如下，我大概理解原理，但細節還待研究。簡單來說就是算每個字元平均要佔該div多少width來作分散對齊。
+$.fn.strech_text = function(){ var elmt = $(this), cont_width = elmt.width(), txt = elmt.html(), one_line = $(&#39;&#39; + txt + &#39;&#39;), nb_char = elmt.text().length, spacing = cont_width/nb_char, txt_width; elmt.html(one_line); txt_width = one_line.width(); if (txt_width &amp;lt; cont_width){ var char_width = txt_width/nb_char, ltr_spacing = spacing - char_width + (spacing - char_width)/nb_char; one_line.css({&#39;letter-spacing&#39;: ltr_spacing}); } else { one_line.contents().unwrap(); elmt.addClass(&#39;justify&#39;); } }; $(document).</description>
+    </item>
+    
+    <item>
+      <title>1st Practice: Click Click Boom</title>
+      <link>https://idontwannarock.github.io/hugo_blog/2017/09/1st-practice-click-click-boom/</link>
+      <pubDate>Fri, 15 Sep 2017 07:36:23 +0800</pubDate>
+      
+      <guid>https://idontwannarock.github.io/hugo_blog/2017/09/1st-practice-click-click-boom/</guid>
+      <description>第一個目標 寫個簡單作品來練習 HTML跟 CSS
+作品：Click Click Boom
+黑白版本
+粉紅大理石版本
+黑色大理石版本
+遇到困難 1. 置中 左右置中很容易，但上下置中就麻煩了，還要隨瀏覽器視窗大小變動就更麻煩。
+最後在 stackoverflow查到一種解法，就是先設定position: absolute;，然後top、bottom、left、right都設0，再用margin: 0;來自動對齊。
+2. 套框 因為想要使用 HTML+CSS作套框而不是用畫去背圖的方式，這真的殺死很多腦筋，內部框跟文字怎麼排都無法置中，對，又是無法上下置中，用text-align只能左右置中，vertical-align完全不理我。
+最後又是 stackoverflow查到解法，要用 CSS3的新 property，display: flex;來解，然後設定align-item: center;跟justify-content: center;來上下左右置中，但當然衍伸出下個問題。
+3. 相容 瀏覽器太多種，新舊版本對 HTML5或 CSS3相容度又不一致，真的會搞死，實務上難道也是只能靠經驗？或出問題再來修改嗎？還是有更合理的作法？
+最後是上w3schools一項一項 property查相容再加相容敘述-webkit-或-moz-來解決。
+4. iOS相容 這個真的超哭，我整個都做完了，就只有在 iOS裝置上，按鈕按不下去！
+我先是想說應該是transform可能不相容，所以一樣查了w3schools加上相容敘述，結果還是不行！
+以我的智商真的想不出來惹，最後只能跟阿混求救，大神就是大神，瞬間幫我找出答案，因為Pseudo class active跟 iOS不相容……
+當然阿混很好心的幫我查好解法，結果是要用 JavaScript來解，這跟我只想練習 HTML+CSS本意不符，但找了一下好像真的沒有更好的解法，所以最後還是用了這個解法。
+感想 工程師真的很辛苦，但也很爽。能親手做出成品很有成就感！後續再來想要加什麼功能會更舒壓XD</description>
+    </item>
+    
+  </channel>
+</rss>

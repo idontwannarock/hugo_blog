@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cask on Wang&#39;s Blog</title>
+    <link>https://idontwannarock.github.io/hugo_blog/tags/cask/</link>
+    <description>Recent content in cask on Wang&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 03 Nov 2017 09:05:02 +0800</lastBuildDate>
+    
+	<atom:link href="https://idontwannarock.github.io/hugo_blog/tags/cask/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>我在Macbook Pro的設置 - 2017版</title>
+      <link>https://idontwannarock.github.io/hugo_blog/2017/11/%E6%88%91%E5%9C%A8macbook-pro%E7%9A%84%E8%A8%AD%E7%BD%AE-2017%E7%89%88/</link>
+      <pubDate>Fri, 03 Nov 2017 09:05:02 +0800</pubDate>
+      
+      <guid>https://idontwannarock.github.io/hugo_blog/2017/11/%E6%88%91%E5%9C%A8macbook-pro%E7%9A%84%E8%A8%AD%E7%BD%AE-2017%E7%89%88/</guid>
+      <description>前言 一直以來都是 PC人，從來沒用過任何 Apple或 Linux的相關產品，剛好有買筆電的需求，想趁機接觸一下不同的作業系統生態，而且久聞 Apple筆電品質很好，就添購了 Macbook Pro來當我人生第一台筆電。
+剛拿到筆電總是需要一些設置，盡量讓 PC跟 MBP之間資訊同步以及應用軟體上相通或相容，以達到同步並簡化作業環境的目標，提高生產效率。
+於是跟朋友詢問以及上網稍作了解後，有了以下的設置。
+軟體環境設置 因為是要習慣 Unix-based的作業環境，所以我並沒有特別強求各方面都要設置到跟 Windows環境類似，所以操作模式上並沒有更動。
+但安裝的軟體上就有些考量，希望能達到集中管理，這就不得不提每個 MacOS都應該必備的 Homebrew。
+安裝 Homebrew Homebrew是一套開源的 MacOS系統的軟體套件管理系統，用來簡化 MacOS系統上的軟體安裝、卸載等過程，是用 MacOS內建的 Ruby語言寫成。
+但 Homebrew在安裝前需要先安裝 Xcode，似乎是因為 Xcode會一併安裝一些常用的 command line。
+還好 Xcode也是免費軟體，可以直接透過 App Store下載，要注意檔案蠻大的，下載安裝的過程會要花一點時間。
+Xcode安裝好之後，就打開「終端機」，輸入下面這行來下載安裝 Homebrew：
+$ ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;  注意第一個$是開啟終端機就會顯示在你可以打字的那一行的開頭，不用重複輸入。
+讓他自動跑完之後，就可以開始使用brew指令來操作啦！
+日後要更新 Homebrew這個軟體本身，也是一樣在終端機輸入brew update以及brew tap homebrew/dupes就可以了。
+安裝 Caskroom 除了 Homebrew以外，第二個推薦安裝的就是 Caskroom，這也是一個軟體套件管理系統，是 Homebrew的擴充。
+一般來說 Caskroom主要用來下載安裝一些有操作介面的應用軟體，譬如 Chrome、Spotify、Evernote等等；Homebrew則常用於下載安裝一些沒有操作介面的工具或第三方資源，例如 Git、Hugo、Telnet這種。
+Caskroom可以看成 App Store的擴充，並附帶自動安裝管理的功能，而且因為也是開源專案，它能安裝的軟體是由開放社群中的使用者提供維護，有很多 App Store沒有的軟體，當然是正版、免費版或試用版。
+而且 Caskroom還有更新管理的功能，除非軟體自帶自動更新功能，否則可以透過 Caskroom統一更新。所以一般來說，Homebrew更偏開發者使用，Caskroom則更適合一般使用者。</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Github Pages on Wang&#39;s Blog</title>
+    <link>https://idontwannarock.github.io/hugo_blog/tags/github-pages/</link>
+    <description>Recent content in Github Pages on Wang&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 09 Sep 2017 15:22:03 +0800</lastBuildDate>
+    
+	<atom:link href="https://idontwannarock.github.io/hugo_blog/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>練習用 Hugo架部落格在Github Pages(2)</title>
+      <link>https://idontwannarock.github.io/hugo_blog/2017/09/hugo-practice-2/</link>
+      <pubDate>Sat, 09 Sep 2017 15:22:03 +0800</pubDate>
+      
+      <guid>https://idontwannarock.github.io/hugo_blog/2017/09/hugo-practice-2/</guid>
+      <description>學習目標 學習怎麼使用 Hugo架設網頁在 Github Pages。
+學習內容 環境設定 我並非本科，所以以下作法全都是從各官網跟谷哥研究而來。先說明我只會用 Windows，而且是 Win10，所以想用 MacOS或 Linux的可以左轉出去自己上官網跟谷哥研究。
+環境設定這邊需要作幾件事，設定 Hugo，設定 Git，新增 Github帳號，跟設定 SSH，除了設定 SSH要最後作以外，其他順序無所謂。
+Hugo環境設定 如同上一篇所述，Hugo雖然是 Go語言寫的，但現在的版本並不用安裝 Go，只要到這個網址 https://github.com/gohugoio/hugo/releases 下載最新版本，找地方解壓縮，然後將解壓縮後的 exe檔路徑設定到 Path環境變數裡面就可以了。
+比較完整的流程應該是先創建 Hugo目錄，例如C:\Hugo，然後建兩個子資料夾bin和Sites。下載 Hugo最新版本的 zip檔，解壓縮到bin資料夾裡面，若 exe檔檔名不是hugo.exe就改成hugo.exe。
+然後要設定 Path環境變數，厲害的人可以直接用 cmd設定，就不講了。來講我這種菜鳥的方法，右鍵點開始鍵（就是狀態列 Windows圖案的那個鈕），選「系統」，然後選右上方的「系統資訊」，跳出來視窗後，選左邊的「進階系統設定」，再跳出一個視窗後，選「進階」頁面下方的「環境變數(N)&amp;hellip;」，會再跳出一個視窗分成上下兩區塊，在上方的使用者變數區塊，變數那一欄找到 Path後，連點兩下又會跳出一個新視窗，這次直接按右邊的「新增(N)」，然後填上剛剛hugo.exe的路徑，例如C:\Hugo\bin，最後再一路按確定以及關閉視窗出去。
+然後為了確定是否有設定成功，請再右鍵點一次開始鍵，選「Windows PowerShell(系統管理員)(A)」來打開 PowerShell，然後直接輸入hugo version後按 Enter鍵，如果有顯示出版本資訊，那就是設定成功。
+安裝 Git、申請 Github帳號及設定 SSH 這段建議直接參考另外一篇筆記來操作。
+Git及 Github基礎認識
+生成基本網頁 這邊會用到一個簡單的指令，跟一些 Hugo本身的指令。主要會用到移到資料夾位置的cd指令，所以不太會的人可以谷哥了解一下。
+請先打開前面建立好的C:\Hugo\Sites資料夾，對資料夾內空白處點右鍵，選擇 Git Bash Here開啟 Git Bash，這樣就預設好路徑是在Sites資料夾內。
+接著輸入以下指令生成基本的網頁。
+hugo new site Hugo-Blog  這樣就會在Sites資料夾內生成Hugo-Blog資料夾，並有以下目錄結構：
+|--archetypes |--default.md #生成文章的模板 |--content #md檔案存放位置 |--data |--layouts |--static #圖片等存放位置 |--themes #模板主題目錄 config.</description>
+    </item>
+    
+    <item>
+      <title>練習用 Hugo架部落格在Github Pages(1)</title>
+      <link>https://idontwannarock.github.io/hugo_blog/2017/09/hugo-practice-1/</link>
+      <pubDate>Sat, 09 Sep 2017 00:17:31 +0800</pubDate>
+      
+      <guid>https://idontwannarock.github.io/hugo_blog/2017/09/hugo-practice-1/</guid>
+      <description>源起 17年9月7日在 ptt Soft_Job版看到胡立大大 po文準備作一個計劃-建立 Slack群組來幫助大家練習討論一些網頁相關的東西，而我需要多作一些練習，並且最好能有人詢問或討論所以加入。
+而9月8日胡立大大就回信了，基本上就是解釋他想建立一個開放的群組，群組裡沒有老師，他擔任類似助教的腳色，會固定提出練習的題目，解答一些疑問跟提供一些資源這樣。
+其中胡立大大有提到希望大家能養成自學、解決問題以及歸納知識的習慣，我覺得很有道理很重要，所以剛好他也有提到希望大家學習「怎麼用靜態部落格產生系統」，可以練習怎麼使用靜態部落格產生系統、Git 的基本操作以及 Github 的相關知識。
+所以，就來吧！
+學習目標 學習怎麼用靜態部落格產生系統 Hugo，並且把部落格架在 Github Pages上面。
+學習內容 什麼是靜態、動態 就我看網路多種說法，歸納的概念大概是部落格或網站本身顯示不需要重複跟 server端交流的就算靜態，反之就算動態；最近因為 SEO的興起，還有一種偽靜態。
+什麼是靜態部落格（網頁）產生系統 Static Site Generator 在網路上找到這篇文章，講得蠻清楚的。
+在講什麼是靜態部落格（網頁）產生系統 Static Site Generator(SSG)之前，應該講一下內容管理系統 Content Management System(CMS)，例如 Wordpress。
+CMS的理念是讓作者不用擔心部落格，也就是網頁輸出的各種技術問題，只需要選擇喜歡的模板 template，就可以使用 CMS提供的文字編輯器寫作，節省很多技術上的麻煩，相信有用過 Wordpress都能理解。
+但相對之下 CMS就有一些壞處，例如只能使用 CMS提供的編輯功能（不然還是要會網頁或程式知識去作修改）、因為很多動態功能所以伺服器工作比較重可能影響效能、可能因為某些軟體或功能升級或資料庫出問題而導致網頁也出問題。
+而 SSG算是在 CMS跟完全自己 coding寫網頁架部落格的中間，比較知名的有 Jekyll跟 Hugo，或胡立提到的 Hexo。
+對 SSG我的認知是有點像在前端方面簡化的 CMS。還是有 template或 themes，但寫作部分一般用 Markdown語法寫作來簡化文字編輯功能，但也給予很大的自由度，因為有些近似自己寫 HTML，所以要修改什麼功能或加什麼 widget，都不用像 Wordpress要透過 plugin的方式加入，而是可以直接嵌入，但相對的其實也需要對 HTML語法有一些認識。
+而後端方面 SSG跟 CMS就很相似，通常兩者都有作後端一條龍的服務（要收費），也可以自己另外選擇伺服器跟資料庫儲存網頁內容。
+所以 SSG好處就跟 CMS相對，如自由度比較大、因為靜態網頁不需要一直跟伺服器交換資料而提高效能、因為原則上只使用基本 HTML+Markdown所以網頁出問題機會小。
+另外有一些其他好處，如因為幾乎沒有伺服器端的功能所以安全性高、因為類似在寫網頁而能作到版本控管（事實上 Wordpress也有這個功能，但只限於草稿的樣子）。</description>
+    </item>
+    
+  </channel>
+</rss>

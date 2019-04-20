@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Signup on Wang&#39;s Blog</title>
+    <link>https://idontwannarock.github.io/hugo_blog/tags/signup/</link>
+    <description>Recent content in Signup on Wang&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 11 Sep 2017 07:11:59 +0800</lastBuildDate>
+    
+	<atom:link href="https://idontwannarock.github.io/hugo_blog/tags/signup/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>實作簡單登入會員系統(1)</title>
+      <link>https://idontwannarock.github.io/hugo_blog/2017/09/login-signup-function/</link>
+      <pubDate>Mon, 11 Sep 2017 07:11:59 +0800</pubDate>
+      
+      <guid>https://idontwannarock.github.io/hugo_blog/2017/09/login-signup-function/</guid>
+      <description>學習目標  實作簡單會員系統，有加入會員、登入、登出 cookie 防範 SQL Injection+XSS hash密碼  學習內容 構思 坦白說，我有自學過一點點前後端的 Udemy網路課程，所以前端的部分，簡單的 HTML, CSS, Javascript, jQuery我還可以，大概是不會寫也可以谷哥看別人怎麼寫的程度。後端也是學過簡單的 PHP跟 MySQL這樣。所以後面的說明很可能會省略很多基礎，而只記錄我不太會或不太熟的部分。
+關於會員系統，Udemy課程的老師其實有教過這個部分，但當時似懂非懂，幾乎就是 copy老師的程式碼，糊里糊塗就寫出來，PHP跟 MySQL的部分一片模糊，所以先來嘗試自己重新寫一遍，不行再來找找看網路教學。
+要寫登入登出的功能，我第一個想到就是要用 HTML的form先做三個input跟一個button，若要串接資料庫，應該還要再作一個button切換 Sign Up跟 Login畫面來作區別。預計應該要用 jQuery控制切換 Sign Up/Login的功能。
+然後後端邏輯應該就是先作 Sign Up/Login資料的驗證部分，用ajax傳輸資料到後端，檢查輸入的username、email跟password是否空白、格式是否正確以及是否重複，用echo輸出錯誤提示訊息給前端。
+接著作 Sign Up部分，接著剛剛驗證完資料正確後，檢查資料庫有無重複資料後，再把username、email跟password存進資料庫。
+最後再作 Login部分，先用使用者輸入的username比對資料庫有無紀錄，再比對password，最後輸出 Login成功訊息。這邊會感覺會需要了解$_SESSION跟$_COOKIE怎麼運作，因為要幫 Sign Up/Login成功的使用者加上$_SESSION或$_COOKIE。
+接著作 SQL Injection及 XSS攻擊的防範。最後再將使用者 Sign Up時輸入的password作 hash處理。
+另外以下是以只架站在自己 Windows電腦的 XAMPP上為前提，XAMPP架站簡單教學可以看我之前寫的這篇筆記：XAMPP安裝設定及簡單 PHP練習。
+還有就是如果想要讓自己寫完的作品可以讓別人看到，可能要自己先想辦法查做法，我自己都還搞不太清楚。（攤手）
+版面設定 所以就從寫個form、三個input跟兩個按鈕開始好了。我猶豫了一下要不要用 Bootstrap，還是用好了，畢竟練習的重點在後端，畫面就直接套用現成的版就好。
+所以直接就貼上 Bootstrap 4的Starter template，因為後面要用ajax，所以 jQeury的版本記得從 slim換成最起碼 min的版本。然後直接用 Bootstrap的Forms作模板。
+切換功能 接下來就是複習 jQuery語法的時候，因為這邊用到的功能不難所以不多講。大概方向就是在click動作上建立一個判斷式，判斷目前是 Login轉 Sign Up要做什麼事；Sign Up轉 Login要做什麼事。這部分的script我是寫在body的最後。</description>
+    </item>
+    
+  </channel>
+</rss>

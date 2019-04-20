@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MacOS on Wang&#39;s Blog</title>
+    <link>https://idontwannarock.github.io/hugo_blog/tags/macos/</link>
+    <description>Recent content in MacOS on Wang&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Sep 2017 07:13:01 +0800</lastBuildDate>
+    
+	<atom:link href="https://idontwannarock.github.io/hugo_blog/tags/macos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git及 GitHub基礎認識</title>
+      <link>https://idontwannarock.github.io/hugo_blog/2017/09/git-and-github-basic-1/</link>
+      <pubDate>Thu, 14 Sep 2017 07:13:01 +0800</pubDate>
+      
+      <guid>https://idontwannarock.github.io/hugo_blog/2017/09/git-and-github-basic-1/</guid>
+      <description>學習目標 因為 Git指令一直出問題，今天就來搞清楚 Git跟 GitHub的各種問題吧！
+學習內容 Git跟 GitHub是什麼 Git Wiki則說 Git是一種分散式版本控制軟體。
+詳細的說明可以參考Git Documentation，有中文版，不過翻譯的只有前幾個主題。
+GitHub Wiki上說，GitHub是一個透過 Git進行版本控制的軟體原始碼代管服務，簡單來說就是可以放各種 Code的地方，但其實也可以放一些文件跟圖片等，好像沒有空間限制，只是有單一檔案大小 1GB的軟性限制。
+Git觀念 這裡我們來先解釋一下 Git版本控制的觀念，我覺得寫點科普寫的這兩篇寫得非常平易近人而且完整，推薦給大家！
+GIT新手入門教學 – PART 1
+GIT新手入門教學 – PART 2
+我的理解是譬如有一份作業需要大家一起作，大家先把原始的作業文件(origin)放在小組長那邊(Remote)，然後各自 copy一份回家(Local)寫自己要做的部分，然後拿回去給小組長，由小組長決定誰的作業寫得好，可以成為新一代的原始作業文件(master)；或某人提交的作業寫得不完整，但寫過地那部分很好，就跟原始作業合併(merge)成一份新一代的原始作業文件。大家也可以 copy別人寫的作業回去修改(pull)，反正最後由小組長決定哪個版本的作業寫得最好，就可以成為新一代的原始作業文件這樣。
+而大家 copy回家寫的作業也有三個階段，假如我在電腦上打作業，分成三個資料夾，一個是 Working Directory、一個是 Staging Area、一個是 Repository。
+第一個資料夾就是放 copy回家的作業，然後我可能亂打了一些、新增修改了一些，但交出去很丟臉的部分；第二個資料夾就是放某些我覺得可以的部分作業，先暫時存起來；最後一個資料夾就是放我確定要提交的作業版本。
+所以我寫作業的流程就是這樣：
+ 先 copy一份(pull)原始作業文件(origin)回家(local) 在 Working Directory資料夾寫作業，找各種資料，新增刪減等等 將比較滿意的部分暫存(add)到 Staging Area資料夾 當 Staging Area資料夾有比較完整的作業版本後，一次整個儲存(commit)到 Repository資料夾中 最後再將 Repository資料夾中要繳交的作業交出去(push)給小組長(remote)  建立 GitHub帳號 接下來說明實際操作流程。
+建議大家先到 GitHub建立自己的帳號，基本功能都是免費的，只有當你要發展私人專案，想要將 repositories設定為 private的時候會要收費的樣子。
+GitHub帳號申請流程跟一般申請免費帳號一樣，就到首頁按下綠色的 Sign up for GitHub按鈕之後，一路照指示填上資料跟選擇選項就可以了。然後 GitHub應該會寄一封認證 email，請點 email裡面的 Verify email address那個連結來確認你的 email address。</description>
+    </item>
+    
+  </channel>
+</rss>

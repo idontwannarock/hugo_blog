@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algorithm on Wang&#39;s Blog</title>
+    <link>https://idontwannarock.github.io/hugo_blog/tags/algorithm/</link>
+    <description>Recent content in Algorithm on Wang&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 15 Nov 2017 14:26:17 +0800</lastBuildDate>
+    
+	<atom:link href="https://idontwannarock.github.io/hugo_blog/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Java樂透抽取算法初探</title>
+      <link>https://idontwannarock.github.io/hugo_blog/2017/11/java%E6%A8%82%E9%80%8F%E6%8A%BD%E5%8F%96%E7%AE%97%E6%B3%95%E5%88%9D%E6%8E%A2/</link>
+      <pubDate>Wed, 15 Nov 2017 14:26:17 +0800</pubDate>
+      
+      <guid>https://idontwannarock.github.io/hugo_blog/2017/11/java%E6%A8%82%E9%80%8F%E6%8A%BD%E5%8F%96%E7%AE%97%E6%B3%95%E5%88%9D%E6%8E%A2/</guid>
+      <description>前言 因為做到這個經典練習演算法的題目，雖然是非常入門級的，也是讓我想了很久，覺得都做了這麼久，不記錄下來也是蠻可惜。
+題目 請隨機從正整數 1-42當中隨機抽出 6個數字，不用排序，但不可重複。
+解法 樂透這個題目主要可以練習的有三個地方，隨機、迴圈，還有就是如何確保數字不重複。
+  以 Java來說，隨機就是使用java.lang.Math類別裡的靜態方法random()，但要注意Math.random()之後產生的是大於等於 0、小於 1，也就是0 &amp;lt;= Math.random() &amp;lt; 1的double型態浮點常數。 因此，以這題來說，還要記得利用(int)轉換型態成整數型態的常數。 另外，若不放心浮點數轉換為整數後的值，可以利用一樣是Math類別裡的靜態方法floor()或ceiling()來取無條件進位或無條件捨去後的整數值 而要設定亂數範圍，公式為Math.random() * 範圍個數 + 初值   然後因為已經確定要抽出的數目，所以可以使用元素個數不能變動的陣列，當然也可以用可以變動個數的Collection或其子介面去解決。關鍵就在於不可重複。
+這篇只討論陣列的解法。
+暴力解：重複檢查 最簡單的寫法肯定就是暴力解：每抽出一個數字就存到結果陣列，然後每抽一次，就跟陣列裡每個數字都比對一次，一有重複就重抽。
+// 設定存儲樂透數字陣列 int[] randomArray = new int[6]; // 執行抽取樂透數字的動作 6次 for (int i = 0; i &amp;lt; randomArray.length; i++) { // 先將亂數出來的數字存入陣列第 i個位置 randomArray[i] = (int)(Math.random() * 42) + 1; // 接著執行檢查迴圈 for (int j = 0; j &amp;lt; i; j++) { // 輪流跟陣列中目前存在的其他元素比對 if (randomArray[i] == randomArray[j]) { // 如果有找到重複數字，就將計數器 i減 1，然後重抽 i--; // 注意這邊 break是跳出 if外面一層的 for迴圈 break; } } } // 印出樂透數字陣列中的數字，列印陣列也要用迴圈，這邊是用新版寫法 for (int num : randomArray) { System.</description>
+    </item>
+    
+  </channel>
+</rss>
