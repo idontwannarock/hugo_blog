@@ -12,23 +12,18 @@
     
     
     <item>
-      <title>Markdown語法</title>
+      <title>Markdown 語法</title>
       <link>https://idontwannarock.github.io/hugo_blog/2017/10/markdown-syntax/</link>
       <pubDate>Sun, 22 Oct 2017 15:42:04 +0800</pubDate>
       
       <guid>https://idontwannarock.github.io/hugo_blog/2017/10/markdown-syntax/</guid>
-      <description>Markdown特色 1. 易編寫 相對於 HTML需要注意各種 tag、屬性、特殊字元，Markdown是更容易編寫的方式，雖然無法像 HTML那樣可以直接透過各種屬性，甚至 CSS來達到各種效果，但純粹以書寫來說，Markdown的功能已經相當夠用。
-2. 轉換 HTML 不過如果有需要的話，Markdown可以用各種方式轉換成 HTML，以方便我們發布成網頁或部落格文章，網路上有相當多的程式可以達到這點；相對之下，從 HTML轉換回 Markdown就沒這麼方便了，主要原因就是 HTML有相當多屬性等並不被 Markdown支援，所以有轉換回 Markdown的困難。
-但還是有補救的辦法，在編寫 Markdown文件的時候，其實還是可以使用 HTML語法的，我使用過的轉換器都可以讀取 HTML語法，並正常顯示以及轉換，所以真的有什麼 Markdown找不到的 HTML功能，就直接寫 HTML吧！當然這就需要對 HTML語法有更多認識了。
-3. 編寫／視覺 跟 HTML一樣，在編寫 Markdown的時候呈現的畫面，跟實際呈現的畫面其實是不一樣的。 例如我們編寫 Markdown如下：
+      <description>Markdown 特色 易編寫 相對於 HTML 需要注意各種 tag、屬性、特殊字元，Markdown 是更容易編寫的方式，雖然無法像 HTML 那樣可以直接透過各種屬性，甚至 CSS 來達到各種效果，但純粹以書寫來說，Markdown 的功能已經相當夠用。
+轉換 HTML 不過如果有需要的話，Markdown 可以用各種方式轉換成 HTML，以方便我們發布成網頁或部落格文章，網路上有相當多的程式可以達到這點；相對之下，從 HTML 轉換回 Markdown 就沒這麼方便了，主要原因就是 HTML 有相當多屬性等並不被 Markdown 支援，所以有轉換回 Markdown 的困難。
+但還是有補救的辦法，在編寫 Markdown 文件的時候，其實還是可以使用 HTML 語法的，我使用過的轉換器都可以讀取 HTML 語法，並正常顯示以及轉換，所以真的有什麼 Markdown 找不到的 HTML 功能，就直接寫 HTML 吧！當然這就需要對 HTML 語法有更多認識了。
+編寫／視覺 跟 HTML 一樣，在編寫 Markdown 的時候呈現的畫面，跟實際呈現的畫面其實是不一樣的。
+例如我們編寫 Markdown 如下：
 - ***This*** is a [sample](http://example.com/ &amp;quot;example.com&amp;quot;).  實際呈現的畫面其實是這樣的：
-  This is a sample.   所以在編寫 Markdown的時候，最好找個可以隨時觀看實際畫面的編輯器來確認實際畫面。
-區塊元素 換行 原則上按 Enter鍵就是換行。
-要注意的是有些轉換器會要求不同的換行字元，例如有些會要求在行尾加上兩個空白，再按 Enter鍵，才代表換行；也有些會要求兩個空白加一個 tab鍵等等，所以建議要找可以即時顯示畫面的編輯器，隨時確認實際畫面。
-分段 Markdown是以空白行來分段，原則上就是該行只有一個 Enter就換行。
-同樣的，要注意有些編輯器會要求不同的特殊字元來代表空白行。
-標題 Markdown支援 Setext以及 atx兩種形式的標題。一般都用 atx語法，標題的階層較多，語法也比較好記。
-Setex形式 以底線的方式來表示標題，只有兩種如下：</description>
+  This is a sample.   所以在編寫 Markdown 的時候，最好找個可以隨時觀看實際畫面的編輯器來確認實際畫面。</description>
     </item>
     
     <item>
@@ -40,9 +35,9 @@ Setex形式 以底線的方式來表示標題，只有兩種如下：</descripti
       <description>第二個目標 練習報紙排版。
 作品：視網膜早報
 參考：視網膜 Retina FB圖片
-遇到困難 1. 分散對齊 首先遇到的問題就是要讓文字分散對齊，原本以為用text-align: justify;可以解決，結果才發現這只能用在超過一行的文字上哭哭。
-然後查到一個 jQuery解法如下，我大概理解原理，但細節還待研究。簡單來說就是算每個字元平均要佔該div多少width來作分散對齊。
-$.fn.strech_text = function(){ var elmt = $(this), cont_width = elmt.width(), txt = elmt.html(), one_line = $(&#39;&#39; + txt + &#39;&#39;), nb_char = elmt.text().length, spacing = cont_width/nb_char, txt_width; elmt.html(one_line); txt_width = one_line.width(); if (txt_width &amp;lt; cont_width){ var char_width = txt_width/nb_char, ltr_spacing = spacing - char_width + (spacing - char_width)/nb_char; one_line.css({&#39;letter-spacing&#39;: ltr_spacing}); } else { one_line.contents().unwrap(); elmt.addClass(&#39;justify&#39;); } }; $(document).</description>
+遇到困難 分散對齊 首先遇到的問題就是要讓文字分散對齊，原本以為用 text-align: justify; 可以解決，結果才發現這只能用在超過一行的文字上哭哭。
+然後查到一個 jQuery 解法如下，我大概理解原理，但細節還待研究。簡單來說就是算每個字元平均要佔該 div 多少 width 來作分散對齊。
+$.fn.strech_text = function(){ var elmt = $(this), cont_width = elmt.width(), txt = elmt.html(), one_line = $(&#39;&#39; + txt + &#39;&#39;), nb_char = elmt.text().length, spacing = cont_width/nb_char, txt_width; elmt.html(one_line); txt_width = one_line.width(); if (txt_width &amp;lt; cont_width){ var char_width = txt_width/nb_char, ltr_spacing = spacing - char_width + (spacing - char_width)/nb_char; one_line.css({&#39;letter-spacing&#39;: ltr_spacing}); } else { one_line.</description>
     </item>
     
     <item>
@@ -51,22 +46,19 @@ $.fn.strech_text = function(){ var elmt = $(this), cont_width = elmt.width(), tx
       <pubDate>Fri, 15 Sep 2017 07:36:23 +0800</pubDate>
       
       <guid>https://idontwannarock.github.io/hugo_blog/2017/09/1st-practice-click-click-boom/</guid>
-      <description>第一個目標 寫個簡單作品來練習 HTML跟 CSS
+      <description>第一個目標 寫個簡單作品來練習 HTML 跟 CSS
 作品：Click Click Boom
 黑白版本
 粉紅大理石版本
 黑色大理石版本
-遇到困難 1. 置中 左右置中很容易，但上下置中就麻煩了，還要隨瀏覽器視窗大小變動就更麻煩。
-最後在 stackoverflow查到一種解法，就是先設定position: absolute;，然後top、bottom、left、right都設0，再用margin: 0;來自動對齊。
-2. 套框 因為想要使用 HTML+CSS作套框而不是用畫去背圖的方式，這真的殺死很多腦筋，內部框跟文字怎麼排都無法置中，對，又是無法上下置中，用text-align只能左右置中，vertical-align完全不理我。
-最後又是 stackoverflow查到解法，要用 CSS3的新 property，display: flex;來解，然後設定align-item: center;跟justify-content: center;來上下左右置中，但當然衍伸出下個問題。
-3. 相容 瀏覽器太多種，新舊版本對 HTML5或 CSS3相容度又不一致，真的會搞死，實務上難道也是只能靠經驗？或出問題再來修改嗎？還是有更合理的作法？
-最後是上w3schools一項一項 property查相容再加相容敘述-webkit-或-moz-來解決。
-4. iOS相容 這個真的超哭，我整個都做完了，就只有在 iOS裝置上，按鈕按不下去！
-我先是想說應該是transform可能不相容，所以一樣查了w3schools加上相容敘述，結果還是不行！
-以我的智商真的想不出來惹，最後只能跟阿混求救，大神就是大神，瞬間幫我找出答案，因為Pseudo class active跟 iOS不相容……
-當然阿混很好心的幫我查好解法，結果是要用 JavaScript來解，這跟我只想練習 HTML+CSS本意不符，但找了一下好像真的沒有更好的解法，所以最後還是用了這個解法。
-感想 工程師真的很辛苦，但也很爽。能親手做出成品很有成就感！後續再來想要加什麼功能會更舒壓XD</description>
+遇到困難 置中 左右置中很容易，但上下置中就麻煩了，還要隨瀏覽器視窗大小變動就更麻煩。
+最後在 stackoverflow 查到一種解法，就是先設定 position: absolute;，然後 top、bottom、left、right 都設 0，再用 margin: 0; 來自動對齊。
+套框 因為想要使用 HTML+CSS 作套框而不是用畫去背圖的方式，這真的殺死很多腦筋，內部框跟文字怎麼排都無法置中，對，又是無法上下置中，用 text-align 只能左右置中，vertical-align 完全不理我。
+最後又是 stackoverflow 查到解法，要用 CSS3 的新 property，display: flex; 來解，然後設定 align-item: center; 跟 justify-content: center; 來上下左右置中，但當然衍伸出下個問題。
+相容 瀏覽器太多種，新舊版本對 HTML5 或 CSS3 相容度又不一致，真的會搞死，實務上難道也是只能靠經驗？或出問題再來修改嗎？還是有更合理的作法？
+最後是上 w3schools 一項一項 property 查相容再加相容敘述 -webkit- 或 -moz- 來解決。
+iOS相容 這個真的超哭，我整個都做完了，就只有在 iOS 裝置上，按鈕按不下去！
+我先是想說應該是 transform 可能不相容，所以一樣查了 w3schools 加上相容敘述，結果還是不行！</description>
     </item>
     
   </channel>

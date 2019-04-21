@@ -64,7 +64,6 @@ showMeta: true
 
 接下來進入正題，[Rasputin vs Stalin. Epic Rap Battles of History Season 2 finale](https://youtu.be/ZT2z0nrsQ8o) 影片如下，以下將會簡單介紹其中的雙關語或有關的歷史典故
 
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZT2z0nrsQ8o?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 # 歌詞解析
@@ -387,7 +386,7 @@ You'll find that the ex-KGB is the best MC in the ex-CCCP!
 
 普丁是 KGB 出身，曾加入蘇聯共產黨，至今沒有退黨
 
-蘇聯英文為 USSR，但以俄語寫作 CCCP。
+蘇聯英文為 USSR，但俄語則寫作 CCCP。
 
 # 結語
 

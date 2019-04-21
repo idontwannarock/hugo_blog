@@ -17,18 +17,16 @@
       <pubDate>Fri, 15 Sep 2017 10:27:28 +0800</pubDate>
       
       <guid>https://idontwannarock.github.io/hugo_blog/2017/09/4th-practice-twitter-clone/</guid>
-      <description>第四個目標 練習 PHP, MySQL跟 MVC，因為 Bootstrap很方便所以 HTML跟 CSS就這樣吧廠廠~
+      <description>第四個目標 練習 PHP, MySQL 跟 MVC，因為 Bootstrap 很方便所以 HTML 跟 CSS 就這樣吧廠廠~
 作品：史上最簡陋Twitter
 參考：這參考太多了，只能說各種參考orz
 原始碼：可以參考我的Github
-還是要先講一下，這並不是我憑空寫出來的作品，是跟著 Udemy網路課程教學作出來的。
-遇到困難 1. 對自己智商產生質疑 真的是這樣，之所以這麼廢的東西還能作這麼久，事後檢討的結果，絕大多數時間都浪費在因為智商太低產生的各種製造障礙，簡稱製障問題上。
-譬如說出現什麼 404或 500錯誤訊息，花了三個多小時觀看 stackoverflow上高手討論，最後發現是 PHP某一行少加了一個;，當天直接氣到作不下去之類的…
-2. debug 作這個真心受教了，要馬每一步都先作測試，要馬就要會查 bug，人生就是要接受 bug的出現，沒 bug絕對是陰德值爆滿。
+還是要先講一下，這並不是我憑空寫出來的作品，是跟著 Udemy 網路課程教學作出來的。
+遇到困難 對自己智商產生質疑 真的是這樣，之所以這麼廢的東西還能作這麼久，事後檢討的結果，絕大多數時間都浪費在因為智商太低產生的各種製造障礙，簡稱製障問題上。
+譬如說出現什麼 404 或 500 錯誤訊息，花了三個多小時觀看 stackoverflow 上高手討論，最後發現是 PHP 某一行少加了一個 ;，當天直接氣到作不下去之類的…
+debug 作這個真心受教了，要馬每一步都先作測試，要馬就要會查 bug，人生就是要接受 bug 的出現，沒 bug 絕對是陰德值爆滿。
 所以我目前領悟到的順序是：
-  先查 code有沒有漏加什麼;或,或者哪裡括號沒關好，這些出現的頻率超乎你想像，即使有 autocomplete功能也是一樣。 再來用 Chrome的Inspect或 Firefox的Inspector來查錯誤訊息，運氣好就會跟你說你程式碼哪一行有問題。 還找不到，先不要急著 google，先查 Log！先查 Log！先查 Log！很重要，所以講三次。通常 Log也會跟你講執行到哪一行有問題。 最後真的都不行，再拿錯誤訊息去拜 google大神   以上是我的切身之痛，其他的難點在這兩個困難底下，都已經不再重要…喔不是啦，還是補充一個。
-3. AJAX 不太確定這算不算常識，但大家在使用 jQuery+AJAX的時候要注意 jQuery的版本，請不要用到 slim版的喔， jQuery slim版把 AJAX功能拿掉了，所以最起碼要用 minified或更完整的版本，切記切記！
-尤其在套 Bootstrap 4的模板的時候要注意，官方預設是載入 slim版本的 jQuery，要記得自己去改 cdn。</description>
+  先查 code 有沒有漏加什麼 ; 或 ,或者哪裡括號沒關好，這些出現的頻率超乎你想像，即使有 autocomplete 功能也是一樣 再來用 Chrome 的 Inspect 或 Firefox 的 Inspector 來查錯誤訊息，運氣好就會跟你說你程式碼哪一行有問題 還找不到，先不要急著 google，先查 Log！先查 Log！先查 Log！很重要，所以講三次。通常 Log 也會跟你講執行到哪一行有問題 最後真的都不行，再拿錯誤訊息去拜 google 大神   以上是我的切身之痛，其他的難點在這兩個困難底下，都已經不再重要…喔不是啦，還是補充一個。</description>
     </item>
     
     <item>
@@ -37,18 +35,18 @@
       <pubDate>Fri, 15 Sep 2017 10:11:46 +0800</pubDate>
       
       <guid>https://idontwannarock.github.io/hugo_blog/2017/09/3rd-practice-click-click-ben/</guid>
-      <description>第三個目標 練習 JavaScript跟random()函數。
+      <description>第三個目標 練習 JavaScript 跟 random() 函數。
 作品：Click Click Ben
 參考：大帥哥 Ben Hsieh ~
-遇到困難 1. 帥哥阿Ben照片太難挑 這是我製作這個作品中碰到最大的困難！太多太帥了，我無法選擇！！我的媽！！！誰來救救我！！！！
-2. 照片亂數出現位置及亂數間隔時間 其實這個問題我之前就有學過，所以這邊大概紀錄一下作法。
-先用 JavaScript的Math.random()來亂數產生 0-1的浮點數，然後為了適應各種大小的視窗，要乘上document.documentElement.clientHeight或document.documentElement.clientWidth來亂數產生要往右或往下多少 px的數字。
-然後用document.getElementById(&amp;quot;id&amp;quot;).style.top或document.getElementById(&amp;quot;id&amp;quot;).style.left來設定位置。
-亂數間隔時間則用setTimeout()來作，記得括號的兩個參數要用逗點分隔，第一個參數是暫停後要執行的程式，第二個是暫停的時間，單位是千分之一秒。
-3. 控制照片出現或消失 原本想都用 JavaScript控制，但發現直接寫好所有 HTML+CSS後，用display: block;跟display: none;來控制最方便。
-4. 控制次數 這也沒什麼好說的，只是做個記錄。
-最基礎的做法就是設一個變數，然後用if判斷來控制次數。
-控制次數感覺可以用for或while loop來寫，但中間要卡一個按的功能，不知道能不能行？</description>
+遇到困難 帥哥阿 Ben 照片太難挑 這是我製作這個作品中碰到最大的困難！太多太帥了，我無法選擇！！我的媽！！！誰來救救我！！！！
+照片亂數出現位置及亂數間隔時間 其實這個問題我之前就有學過，所以這邊大概紀錄一下作法。
+先用 JavaScript 的 Math.random() 來亂數產生 0-1 的浮點數，然後為了適應各種大小的視窗，要乘上 document.documentElement.clientHeight 或 document.documentElement.clientWidth 來亂數產生要往右或往下多少 px 的數字。
+然後用 document.getElementById(&amp;quot;id&amp;quot;).style.top 或 document.getElementById(&amp;quot;id&amp;quot;).style.left 來設定位置。
+亂數間隔時間則用 setTimeout() 來作，記得括號的兩個參數要用逗點分隔，第一個參數是暫停後要執行的程式，第二個是暫停的時間，單位是千分之一秒。
+控制照片出現或消失 原本想都用 JavaScript 控制，但發現直接寫好所有 HTML+CSS 後，用 display: block; 跟 display: none; 來控制最方便。
+控制次數 這也沒什麼好說的，只是做個記錄。
+最基礎的做法就是設一個變數，然後用 if 判斷來控制次數。
+控制次數感覺可以用 for 或 while loop 來寫，但中間要卡一個按的功能，不知道能不能行？</description>
     </item>
     
     <item>
@@ -60,9 +58,9 @@
       <description>第二個目標 練習報紙排版。
 作品：視網膜早報
 參考：視網膜 Retina FB圖片
-遇到困難 1. 分散對齊 首先遇到的問題就是要讓文字分散對齊，原本以為用text-align: justify;可以解決，結果才發現這只能用在超過一行的文字上哭哭。
-然後查到一個 jQuery解法如下，我大概理解原理，但細節還待研究。簡單來說就是算每個字元平均要佔該div多少width來作分散對齊。
-$.fn.strech_text = function(){ var elmt = $(this), cont_width = elmt.width(), txt = elmt.html(), one_line = $(&#39;&#39; + txt + &#39;&#39;), nb_char = elmt.text().length, spacing = cont_width/nb_char, txt_width; elmt.html(one_line); txt_width = one_line.width(); if (txt_width &amp;lt; cont_width){ var char_width = txt_width/nb_char, ltr_spacing = spacing - char_width + (spacing - char_width)/nb_char; one_line.css({&#39;letter-spacing&#39;: ltr_spacing}); } else { one_line.contents().unwrap(); elmt.addClass(&#39;justify&#39;); } }; $(document).</description>
+遇到困難 分散對齊 首先遇到的問題就是要讓文字分散對齊，原本以為用 text-align: justify; 可以解決，結果才發現這只能用在超過一行的文字上哭哭。
+然後查到一個 jQuery 解法如下，我大概理解原理，但細節還待研究。簡單來說就是算每個字元平均要佔該 div 多少 width 來作分散對齊。
+$.fn.strech_text = function(){ var elmt = $(this), cont_width = elmt.width(), txt = elmt.html(), one_line = $(&#39;&#39; + txt + &#39;&#39;), nb_char = elmt.text().length, spacing = cont_width/nb_char, txt_width; elmt.html(one_line); txt_width = one_line.width(); if (txt_width &amp;lt; cont_width){ var char_width = txt_width/nb_char, ltr_spacing = spacing - char_width + (spacing - char_width)/nb_char; one_line.css({&#39;letter-spacing&#39;: ltr_spacing}); } else { one_line.</description>
     </item>
     
     <item>
@@ -71,22 +69,19 @@ $.fn.strech_text = function(){ var elmt = $(this), cont_width = elmt.width(), tx
       <pubDate>Fri, 15 Sep 2017 07:36:23 +0800</pubDate>
       
       <guid>https://idontwannarock.github.io/hugo_blog/2017/09/1st-practice-click-click-boom/</guid>
-      <description>第一個目標 寫個簡單作品來練習 HTML跟 CSS
+      <description>第一個目標 寫個簡單作品來練習 HTML 跟 CSS
 作品：Click Click Boom
 黑白版本
 粉紅大理石版本
 黑色大理石版本
-遇到困難 1. 置中 左右置中很容易，但上下置中就麻煩了，還要隨瀏覽器視窗大小變動就更麻煩。
-最後在 stackoverflow查到一種解法，就是先設定position: absolute;，然後top、bottom、left、right都設0，再用margin: 0;來自動對齊。
-2. 套框 因為想要使用 HTML+CSS作套框而不是用畫去背圖的方式，這真的殺死很多腦筋，內部框跟文字怎麼排都無法置中，對，又是無法上下置中，用text-align只能左右置中，vertical-align完全不理我。
-最後又是 stackoverflow查到解法，要用 CSS3的新 property，display: flex;來解，然後設定align-item: center;跟justify-content: center;來上下左右置中，但當然衍伸出下個問題。
-3. 相容 瀏覽器太多種，新舊版本對 HTML5或 CSS3相容度又不一致，真的會搞死，實務上難道也是只能靠經驗？或出問題再來修改嗎？還是有更合理的作法？
-最後是上w3schools一項一項 property查相容再加相容敘述-webkit-或-moz-來解決。
-4. iOS相容 這個真的超哭，我整個都做完了，就只有在 iOS裝置上，按鈕按不下去！
-我先是想說應該是transform可能不相容，所以一樣查了w3schools加上相容敘述，結果還是不行！
-以我的智商真的想不出來惹，最後只能跟阿混求救，大神就是大神，瞬間幫我找出答案，因為Pseudo class active跟 iOS不相容……
-當然阿混很好心的幫我查好解法，結果是要用 JavaScript來解，這跟我只想練習 HTML+CSS本意不符，但找了一下好像真的沒有更好的解法，所以最後還是用了這個解法。
-感想 工程師真的很辛苦，但也很爽。能親手做出成品很有成就感！後續再來想要加什麼功能會更舒壓XD</description>
+遇到困難 置中 左右置中很容易，但上下置中就麻煩了，還要隨瀏覽器視窗大小變動就更麻煩。
+最後在 stackoverflow 查到一種解法，就是先設定 position: absolute;，然後 top、bottom、left、right 都設 0，再用 margin: 0; 來自動對齊。
+套框 因為想要使用 HTML+CSS 作套框而不是用畫去背圖的方式，這真的殺死很多腦筋，內部框跟文字怎麼排都無法置中，對，又是無法上下置中，用 text-align 只能左右置中，vertical-align 完全不理我。
+最後又是 stackoverflow 查到解法，要用 CSS3 的新 property，display: flex; 來解，然後設定 align-item: center; 跟 justify-content: center; 來上下左右置中，但當然衍伸出下個問題。
+相容 瀏覽器太多種，新舊版本對 HTML5 或 CSS3 相容度又不一致，真的會搞死，實務上難道也是只能靠經驗？或出問題再來修改嗎？還是有更合理的作法？
+最後是上 w3schools 一項一項 property 查相容再加相容敘述 -webkit- 或 -moz- 來解決。
+iOS相容 這個真的超哭，我整個都做完了，就只有在 iOS 裝置上，按鈕按不下去！
+我先是想說應該是 transform 可能不相容，所以一樣查了 w3schools 加上相容敘述，結果還是不行！</description>
     </item>
     
   </channel>

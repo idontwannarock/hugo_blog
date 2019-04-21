@@ -1,5 +1,5 @@
 ---
-title: "AOP及Spring AOP簡述"
+title: "AOP 及 Spring AOP 簡述"
 date: 2018-04-10T13:22:52+08:00
 draft: false
 tags:
@@ -32,6 +32,8 @@ showMeta: true
 ---
 <!-- toc -->
 
+> 這篇文章是初學的時候撰寫的，其中一些觀念並不正確，步驟也可能因為更新或觀念問題而不適用或者多餘，此篇文章僅為留做紀錄
+
 # 簡述
 
 - AOP(Aspect-Oriented Programming) 是一種基於 OOP(Object-Oriented Programming) 的改進
@@ -61,7 +63,7 @@ showMeta: true
 ## 簡述
 
 - AspectJ：Java 社群最完整、最廣為人知的 AOP 實作
-- Spring 2.0以上，可以使用基於 AspectJ 的 annotation 註解或基於 XML 設定的 AOP
+- Spring 2.0 以上，可以使用基於 AspectJ 的 annotation 註解或基於 XML 設定的 AOP
 
 ## Dependencies
 
@@ -80,7 +82,7 @@ showMeta: true
 - spring aop
 - spring aspects
 
-**註：Spring框架的版本可以更動，但須一致**
+**註：Spring 框架的版本可以更動，但須一致**
 
 ## 設定
 
@@ -91,15 +93,15 @@ showMeta: true
 - 在 XML 文件中加入以下設定：
 	- `<aop:aspectj-autoproxy/>`
 - 把橫切關注點的程式碼抽象到切面的類別中
-	- 切面首先是一個 IOC 中的 bean，所以要加上`@Component`註解
-	- 切面還需要加入`@Aspect`註解
+	- 切面首先是一個 IOC 中的 bean，所以要加上 `@Component` 註解
+	- 切面還需要加入 `@Aspect` 註解
 - 在類別中聲明各種通知：
 	- 聲明一個方法
 	- 在方法前加入五種註解，並配合要通知的目標：
 		- `@Before`：執行點之前
 		- `@After`：執行點之後，但無法取得回傳值
-		- `@AfterReturning`：執行點之後，但可以取得回傳值，執行順序在`@After`之前
-		- `@AfterThrowing`：執行出現異常後，可以取得異常資訊，執行順序在`@After`之前
+		- `@AfterReturning`：執行點之後，但可以取得回傳值，執行順序在 `@After` 之前
+		- `@AfterThrowing`：執行出現異常後，可以取得異常資訊，執行順序在 `@After` 之前
 		- `@Around`：執行點前、後、回傳值等全都包括，通常會配合 ProceedingJoinPoint 類別當參數使用
 - 可以在通知方法中聲明一個類別為 JoinPoint 的參數，然後就可以藉此物件取出目標連接點的細節，例如方法名稱及其參數等
 

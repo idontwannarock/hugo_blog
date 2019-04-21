@@ -17,18 +17,16 @@
       <pubDate>Fri, 15 Sep 2017 10:27:28 +0800</pubDate>
       
       <guid>https://idontwannarock.github.io/hugo_blog/2017/09/4th-practice-twitter-clone/</guid>
-      <description>第四個目標 練習 PHP, MySQL跟 MVC，因為 Bootstrap很方便所以 HTML跟 CSS就這樣吧廠廠~
+      <description>第四個目標 練習 PHP, MySQL 跟 MVC，因為 Bootstrap 很方便所以 HTML 跟 CSS 就這樣吧廠廠~
 作品：史上最簡陋Twitter
 參考：這參考太多了，只能說各種參考orz
 原始碼：可以參考我的Github
-還是要先講一下，這並不是我憑空寫出來的作品，是跟著 Udemy網路課程教學作出來的。
-遇到困難 1. 對自己智商產生質疑 真的是這樣，之所以這麼廢的東西還能作這麼久，事後檢討的結果，絕大多數時間都浪費在因為智商太低產生的各種製造障礙，簡稱製障問題上。
-譬如說出現什麼 404或 500錯誤訊息，花了三個多小時觀看 stackoverflow上高手討論，最後發現是 PHP某一行少加了一個;，當天直接氣到作不下去之類的…
-2. debug 作這個真心受教了，要馬每一步都先作測試，要馬就要會查 bug，人生就是要接受 bug的出現，沒 bug絕對是陰德值爆滿。
+還是要先講一下，這並不是我憑空寫出來的作品，是跟著 Udemy 網路課程教學作出來的。
+遇到困難 對自己智商產生質疑 真的是這樣，之所以這麼廢的東西還能作這麼久，事後檢討的結果，絕大多數時間都浪費在因為智商太低產生的各種製造障礙，簡稱製障問題上。
+譬如說出現什麼 404 或 500 錯誤訊息，花了三個多小時觀看 stackoverflow 上高手討論，最後發現是 PHP 某一行少加了一個 ;，當天直接氣到作不下去之類的…
+debug 作這個真心受教了，要馬每一步都先作測試，要馬就要會查 bug，人生就是要接受 bug 的出現，沒 bug 絕對是陰德值爆滿。
 所以我目前領悟到的順序是：
-  先查 code有沒有漏加什麼;或,或者哪裡括號沒關好，這些出現的頻率超乎你想像，即使有 autocomplete功能也是一樣。 再來用 Chrome的Inspect或 Firefox的Inspector來查錯誤訊息，運氣好就會跟你說你程式碼哪一行有問題。 還找不到，先不要急著 google，先查 Log！先查 Log！先查 Log！很重要，所以講三次。通常 Log也會跟你講執行到哪一行有問題。 最後真的都不行，再拿錯誤訊息去拜 google大神   以上是我的切身之痛，其他的難點在這兩個困難底下，都已經不再重要…喔不是啦，還是補充一個。
-3. AJAX 不太確定這算不算常識，但大家在使用 jQuery+AJAX的時候要注意 jQuery的版本，請不要用到 slim版的喔， jQuery slim版把 AJAX功能拿掉了，所以最起碼要用 minified或更完整的版本，切記切記！
-尤其在套 Bootstrap 4的模板的時候要注意，官方預設是載入 slim版本的 jQuery，要記得自己去改 cdn。</description>
+  先查 code 有沒有漏加什麼 ; 或 ,或者哪裡括號沒關好，這些出現的頻率超乎你想像，即使有 autocomplete 功能也是一樣 再來用 Chrome 的 Inspect 或 Firefox 的 Inspector 來查錯誤訊息，運氣好就會跟你說你程式碼哪一行有問題 還找不到，先不要急著 google，先查 Log！先查 Log！先查 Log！很重要，所以講三次。通常 Log 也會跟你講執行到哪一行有問題 最後真的都不行，再拿錯誤訊息去拜 google 大神   以上是我的切身之痛，其他的難點在這兩個困難底下，都已經不再重要…喔不是啦，還是補充一個。</description>
     </item>
     
     <item>
@@ -37,18 +35,12 @@
       <pubDate>Mon, 11 Sep 2017 07:11:59 +0800</pubDate>
       
       <guid>https://idontwannarock.github.io/hugo_blog/2017/09/login-signup-function/</guid>
-      <description>學習目標  實作簡單會員系統，有加入會員、登入、登出 cookie 防範 SQL Injection+XSS hash密碼  學習內容 構思 坦白說，我有自學過一點點前後端的 Udemy網路課程，所以前端的部分，簡單的 HTML, CSS, Javascript, jQuery我還可以，大概是不會寫也可以谷哥看別人怎麼寫的程度。後端也是學過簡單的 PHP跟 MySQL這樣。所以後面的說明很可能會省略很多基礎，而只記錄我不太會或不太熟的部分。
-關於會員系統，Udemy課程的老師其實有教過這個部分，但當時似懂非懂，幾乎就是 copy老師的程式碼，糊里糊塗就寫出來，PHP跟 MySQL的部分一片模糊，所以先來嘗試自己重新寫一遍，不行再來找找看網路教學。
-要寫登入登出的功能，我第一個想到就是要用 HTML的form先做三個input跟一個button，若要串接資料庫，應該還要再作一個button切換 Sign Up跟 Login畫面來作區別。預計應該要用 jQuery控制切換 Sign Up/Login的功能。
-然後後端邏輯應該就是先作 Sign Up/Login資料的驗證部分，用ajax傳輸資料到後端，檢查輸入的username、email跟password是否空白、格式是否正確以及是否重複，用echo輸出錯誤提示訊息給前端。
-接著作 Sign Up部分，接著剛剛驗證完資料正確後，檢查資料庫有無重複資料後，再把username、email跟password存進資料庫。
-最後再作 Login部分，先用使用者輸入的username比對資料庫有無紀錄，再比對password，最後輸出 Login成功訊息。這邊會感覺會需要了解$_SESSION跟$_COOKIE怎麼運作，因為要幫 Sign Up/Login成功的使用者加上$_SESSION或$_COOKIE。
-接著作 SQL Injection及 XSS攻擊的防範。最後再將使用者 Sign Up時輸入的password作 hash處理。
-另外以下是以只架站在自己 Windows電腦的 XAMPP上為前提，XAMPP架站簡單教學可以看我之前寫的這篇筆記：XAMPP安裝設定及簡單 PHP練習。
-還有就是如果想要讓自己寫完的作品可以讓別人看到，可能要自己先想辦法查做法，我自己都還搞不太清楚。（攤手）
-版面設定 所以就從寫個form、三個input跟兩個按鈕開始好了。我猶豫了一下要不要用 Bootstrap，還是用好了，畢竟練習的重點在後端，畫面就直接套用現成的版就好。
-所以直接就貼上 Bootstrap 4的Starter template，因為後面要用ajax，所以 jQeury的版本記得從 slim換成最起碼 min的版本。然後直接用 Bootstrap的Forms作模板。
-切換功能 接下來就是複習 jQuery語法的時候，因為這邊用到的功能不難所以不多講。大概方向就是在click動作上建立一個判斷式，判斷目前是 Login轉 Sign Up要做什麼事；Sign Up轉 Login要做什麼事。這部分的script我是寫在body的最後。</description>
+      <description>這篇文章是初學的時候撰寫的，其中一些觀念並不正確，步驟也可能因為更新或觀念問題而不適用或者多餘，此篇文章僅為留做紀錄
+ 學習目標  實作簡單會員系統，有加入會員、登入、登出 cookie 防範 SQL Injection+XSS hash 密碼  學習內容 構思 坦白說，我有自學過一點點前後端的 Udemy 網路課程，所以前端的部分，簡單的 HTML, CSS, Javascript, jQuery 我還可以，大概是不會寫也可以谷哥看別人怎麼寫的程度。後端也是學過簡單的 PHP 跟 MySQL 這樣。所以後面的說明很可能會省略很多基礎，而只記錄我不太會或不太熟的部分。
+關於會員系統，Udemy 課程的老師其實有教過這個部分，但當時似懂非懂，幾乎就是 copy 老師的程式碼，糊里糊塗就寫出來，PHP 跟 MySQL 的部分一片模糊，所以先來嘗試自己重新寫一遍，不行再來找找看網路教學。
+要寫登入登出的功能，我第一個想到就是要用 HTML 的 form 先做三個 input 跟一個 button，若要串接資料庫，應該還要再作一個 button 切換 Sign Up 跟 Login 畫面來作區別。預計應該要用 jQuery 控制切換 Sign Up/Login 的功能。
+然後後端邏輯應該就是先作 Sign Up/Login 資料的驗證部分，用 ajax 傳輸資料到後端，檢查輸入的 username、email 跟 password 是否空白、格式是否正確以及是否重複，用 echo 輸出錯誤提示訊息給前端。
+接著作 Sign Up 部分，接著剛剛驗證完資料正確後，檢查資料庫有無重複資料後，再把 username、email 跟 password 存進資料庫。</description>
     </item>
     
   </channel>
